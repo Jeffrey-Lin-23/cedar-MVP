@@ -1,0 +1,127 @@
+<template>
+  <div class=" bg-gray-100 px-10 py-5 rounded-lg shadow-lg min-w-[60vw] flex-row flex-1 justify-between gap-4">
+
+      <div class="grid grid-cols-5 gap-1 items-center">
+        <div class="container justify-start">
+          <img  src="../assets/b-1.png" class="h-1/2" width="150" height="150"/>
+        </div>
+
+        <div class="col-span-3 flex flex-col">
+          <p class="text-3xl mb-7 mt-0">Name <span class="ml-3 text-2xl text-gray-500"> #NUM</span></p>
+          <p class="text-sm mb-5">Due Day: Sun, 03/13/2022</p>
+          <div class="flex flex-row justify-between ">
+            <p class="text-sm flex flex-row">Amount: 20.56
+              <svg
+                  viewBox="0 0 371 592.8"
+                  class="w-4 h-4 text-gray-900 align-middle"
+                  style="transform: translateY(2px);"
+              >
+                <polygon
+                    fill="currentColor"
+                    points="3.4,300.3 186.5,0 366.7,300.5 185.1,409.8 "
+                    data-v-15435500=""
+                ></polygon>
+                <polygon
+                    fill="currentColor"
+                    points="3.4,337 185.5,444 366.7,337 185.1,592.8 "
+                    data-v-15435500=""
+                    class=""
+                ></polygon>
+                <path
+                    fill="currentColor"
+                    d="M-290.1-144"
+                    data-v-15435500=""
+
+                ></path></svg
+              ></p>
+            <p class="text-sm flex flex-row">Remaining: 45.56
+              <svg
+                  viewBox="0 0 371 592.8"
+                  class="w-4 h-4 text-gray-900 align-middle"
+                  style="transform: translateY(2px);"
+              >
+                <polygon
+                    fill="currentColor"
+                    points="3.4,300.3 186.5,0 366.7,300.5 185.1,409.8 "
+                    data-v-15435500=""
+                ></polygon>
+                <polygon
+                    fill="currentColor"
+                    points="3.4,337 185.5,444 366.7,337 185.1,592.8 "
+                    data-v-15435500=""
+                    class=""
+                ></polygon>
+                <path
+                    fill="currentColor"
+                    d="M-290.1-144"
+                    data-v-15435500=""
+
+                ></path></svg
+              >
+              /
+              83.769
+              <svg
+                  viewBox="0 0 371 592.8"
+                  class="w-4 h-4 text-gray-900 align-middle"
+                  style="transform: translateY(2px);"
+              >
+                <polygon
+                    fill="currentColor"
+                    points="3.4,300.3 186.5,0 366.7,300.5 185.1,409.8 "
+                    data-v-15435500=""
+                ></polygon>
+                <polygon
+                    fill="currentColor"
+                    points="3.4,337 185.5,444 366.7,337 185.1,592.8 "
+                    data-v-15435500=""
+                    class=""
+                ></polygon>
+                <path
+                    fill="currentColor"
+                    d="M-290.1-144"
+                    data-v-15435500=""
+
+                ></path></svg
+              >
+            </p>
+          </div>
+
+          <div class="w-full mr-5 bg-green-200  h-3 rounded-lg mt-2 overflow-hidden">
+            <div class="bg-green-400 w-3/4 h-full rounded-lg shadow-md"></div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between ml-5">
+          <button
+              class="flex justify-center items-center py-3 px-4 my-3 h-10 font-sans text-sm font-bold text-center text-gray-900 bg-transparent bg-none border-2 border-gray-300 border-solid cursor-pointer hover:border-gray-600"
+              type="button"
+              style=" border-radius: 90px; transition: all 0.2s ease 0s;"
+          >
+            View NFT
+          </button>
+          <button
+              class="flex justify-center items-center py-3 px-4 my-3 h-10 font-sans text-sm font-bold text-center text-gray-900 bg-transparent bg-none border-2 border-gray-300 border-solid cursor-pointer hover:border-gray-600"
+              type="button"
+              style=" border-radius: 90px; transition: all 0.2s ease 0s;"
+          >
+            Withdraw
+          </button>
+        </div>
+
+      </div>
+
+
+
+
+  </div>
+
+</template>
+
+<script>
+export default {
+  name: "PayCard"
+}
+</script>
+
+<style scoped>
+
+</style>

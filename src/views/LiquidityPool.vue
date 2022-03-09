@@ -1,0 +1,46 @@
+<template>
+  <section class="relative h-4/5">
+    <div class="container flex flex-col items-center  mt-12 lg:mt-20">
+      <div class="bg-gray-100 px-10 py-10 shadow-lg w-4/5 border-2 border-gray-300 border-solid">
+        <div class="grid grid-cols-5 gap-1 items-center">
+          <div class="container justify-end">
+            <img src="../assets/Ethereum_logo.svg.png" class="w-1/5 ml-5">
+          </div>
+
+          <div class=" flex flex-col ">
+            <h2 class="text-2xl" >ETH</h2>
+            <p class="text-sm"> Ethereum</p>
+          </div>
+          <div class="col-span-2">
+              <p class="text-sm">MarketSize:$ 15.67M Total Borrowed:$ 9.99M</p>
+              <p class="text-sm">Deposite APY:1.85% Term: 3 months</p>
+              <p class="text-sm">Term End Day: Sun, 03/13/2022</p>
+          </div>
+          <button
+              class="flex justify-center items-center py-3 px-4 m-0 h-10 font-sans text-sm font-bold text-center text-gray-900 bg-transparent bg-none border-2 border-gray-300 border-solid cursor-pointer hover:border-gray-600"
+              type="button"
+              style=" border-radius: 90px; transition: all 0.2s ease 0s;"
+          >
+            Deposite
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+</template>
+
+<script>
+export default {
+  name: "LiquidityPool"
+}
+</script>
+
+<style scoped>
+
+</style>
