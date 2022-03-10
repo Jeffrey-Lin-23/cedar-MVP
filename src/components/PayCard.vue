@@ -1,16 +1,16 @@
 <template>
-  <div class=" bg-gray-100 px-10 py-5 rounded-lg shadow-lg min-w-[60vw] flex-row flex-1 justify-between gap-4">
+  <div class=" bg-gray-100 px-10 py-5 rounded-lg shadow-lg min-w-[60vw] flex-row flex-1 justify-between gap-4 mb-5">
 
       <div class="grid grid-cols-5 gap-1 items-center">
         <div class="container justify-start">
-          <img  src="../assets/b-1.png" class="h-1/2" width="150" height="150"/>
+          <img  :src="img" class="h-1/2" width="150" height="150"/>
         </div>
 
         <div class="col-span-3 flex flex-col">
-          <p class="text-3xl mb-7 mt-0">Name <span class="ml-3 text-2xl text-gray-500"> #NUM</span></p>
-          <p class="text-sm mb-5">Due Day: Sun, 03/13/2022</p>
+          <p class="text-3xl mb-7 mt-0">{{ name }} <span class="ml-3 text-2xl text-gray-500"> {{ id }}</span></p>
+          <p class="text-sm mb-5">Due Day: {{ due }}</p>
           <div class="flex flex-row justify-between ">
-            <p class="text-sm flex flex-row">Amount: 20.56
+            <p class="text-sm flex flex-row">Amount: {{ Amount }}
               <svg
                   viewBox="0 0 371 592.8"
                   class="w-4 h-4 text-gray-900 align-middle"
@@ -34,7 +34,7 @@
 
                 ></path></svg
               ></p>
-            <p class="text-sm flex flex-row">Remaining: 45.56
+            <p class="text-sm flex flex-row">Remaining: {{ remain }}
               <svg
                   viewBox="0 0 371 592.8"
                   class="w-4 h-4 text-gray-900 align-middle"
@@ -59,7 +59,7 @@
                 ></path></svg
               >
               /
-              83.769
+              {{ total }}
               <svg
                   viewBox="0 0 371 592.8"
                   class="w-4 h-4 text-gray-900 align-middle"
@@ -87,7 +87,7 @@
           </div>
 
           <div class="w-full mr-5 bg-green-200  h-3 rounded-lg mt-2 overflow-hidden">
-            <div class="bg-green-400 w-3/4 h-full rounded-lg shadow-md"></div>
+            <div class="bg-green-400 h-full rounded-lg shadow-md" :style="{width: calculateWidth}"></div>
           </div>
         </div>
         <div class="flex flex-col justify-between ml-5">
@@ -108,17 +108,38 @@
         </div>
 
       </div>
-
-
-
-
   </div>
 
 </template>
 
 <script>
 export default {
-  name: "PayCard"
+  props: {
+    name : String,
+    id : String,
+    due : String,
+    Amount: String,
+    total : String,
+    img: String
+  },
+  data(){
+    return{
+      remain : 0,
+      percent : 0,
+    }
+  },
+  computed: {
+    calculateWidth(){
+
+      return this.percent+"%";
+    }
+  },
+  mounted() {
+    this.remain = parseFloat(this.total) - parseFloat(this.Amount);
+    this.remain = this.remain.toFixed(2);
+    this.percent = parseFloat(this.Amount)/ parseFloat(this.total) * 100;
+    console.log(this.percent)
+  }
 }
 </script>
 

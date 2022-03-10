@@ -33,7 +33,7 @@
               <span>Connect Wallet</span>
             </button>
           </div>
-          <Dropdowns v-else />
+          <Dropdowns v-else @discon="disconnect"  />
           <div class=" md:ml-4 md:flex-shrink-0 md:flex md:items-center">
 
             <button type="button" class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -102,12 +102,8 @@ export default {
     }
   },
   mounted(){
+    this.user = this.$store.getters.getCurrentUser;
     this.$store.dispatch("connectWallet");
-  },
-  computed:{
-    updateConnection(){
-      return this.user = this.$store.getters.getCurrentUser;
-    }
   },
   methods:{
     goTo(name){
@@ -119,6 +115,10 @@ export default {
 
       console.log(this.$store.getters.getCurrentUser);
       this.user = this.$store.getters.getCurrentUser;
+    },
+    disconnect(){
+      this.$store.dispatch("disconnectWallet");
+      this.user = '';
     }
   }
 }

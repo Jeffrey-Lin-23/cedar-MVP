@@ -31,8 +31,7 @@
       class="p-0 my-0 mr-1 ml-0 text-base font-medium leading-7 text-gray-600 align-baseline border-0"
       data-v-468dcf12=""
       style="outline: none;"
-  >Balance:</span
-  >
+  >Balance:</span>
             <div
                 class="flex justify-center items-center p-0 m-0 text-base font-medium leading-7 align-baseline border-0"
                 data-v-15435500=""

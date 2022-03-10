@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import LiquidityPool from '../views/LiquidityPool.vue'
 import PayLater from '../views/PayLater.vue'
 import Summary from '../views/Summary.vue'
+import Listed from '../views/Listed.vue'
 
 const routes = [
     {
@@ -30,11 +31,11 @@ const routes = [
     //     name: 'Payment',
     //     component: Payment
     // },
-    // {
-    //     path: '/Listed',
-    //     name: 'Listed',
-    //     component: Listed
-    // },
+    {
+        path: '/Listed',
+        name: 'Listed',
+        component: Listed
+    },
     // {
     //     path: '/Markets',
     //     name: 'Markets',

@@ -15,6 +15,9 @@ const store = createStore({
             const user = await fetch(url, { headers});
             const u = await user.json();
             state.commit("saveUser", u[0].id);
+        },
+        disconnectWallet(state){
+            state.commit("saveUser", '');
         }
     },
     mutations:{

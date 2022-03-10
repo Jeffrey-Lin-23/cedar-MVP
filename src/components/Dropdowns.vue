@@ -98,7 +98,7 @@
         </div>
         <div class="py-1">
           <MenuItem v-slot="{ active }">
-            <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'group flex items-center px-4 py-2 text-sm']" class="flex flex-row justify-between">
+            <a @click="$emit('discon')" href="#" :class="[active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'group flex items-center px-4 py-2 text-sm']" class="flex flex-row justify-between">
 
               Disconnect
               <svg
@@ -154,5 +154,6 @@ export default {
     UserAddIcon,
     Switch,
   },
+  emit:['discon']
 }
 </script>
