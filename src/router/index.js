@@ -4,12 +4,15 @@ import LiquidityPool from '../views/LiquidityPool.vue'
 import PayLater from '../views/PayLater.vue'
 import Summary from '../views/Summary.vue'
 import Listed from '../views/Listed.vue'
+import Market from '../views/Market.vue'
+import Collection from '../views/Collection.vue'
+import Detail from '../views/Detail.vue'
 
 const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home
+        component: Market
     },
     {
         path: '/Liquidity-Pool',
@@ -26,6 +29,11 @@ const routes = [
         name: 'Summary',
         component: Summary
     },
+    {
+        path: '/Collection',
+        name: 'Collection',
+        component: Collection
+    },
     // {
     //     path: '/Payment',
     //     name: 'Payment',
@@ -36,11 +44,12 @@ const routes = [
         name: 'Listed',
         component: Listed
     },
-    // {
-    //     path: '/Markets',
-    //     name: 'Markets',
-    //     component: Markets,
-    // },
+    {
+        path: '/Detail',
+        name: 'Detail',
+        component: Detail
+    }
+
 ];
 
 const router = createRouter({
