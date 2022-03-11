@@ -184,7 +184,7 @@
 </template>
 
 <script>
-import nftList from '../components/nftList.vue'
+import NFTList from '../components/NFTList.vue'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 
@@ -195,7 +195,7 @@ export default {
     MenuItem,
     MenuItems,
     ChevronDownIcon,
-    nftList,
+    NFTList,
 
   }
 }
