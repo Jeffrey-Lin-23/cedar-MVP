@@ -21,7 +21,7 @@ import Title from "../components/Title.vue";
           <SummaryItem v-show="displayFee" title="Total Payback Amount" :amount="totalAmount" with-unit="true"></SummaryItem>
           <a v-show="displayFee" @click="hidefee" href="#" class="w-full flex justify-end text-blue-400"> hide fees</a>
         </div>
-        <div class="flex flex-row gap-3 mb-3"><input type="checkbox" class="text-xs mt-2"><p class="mt-1 text-xs text-neutral-900 justify-center">I agree to Cedar's <a href="#" class="text-blue-400">Terms of use</a> and I authorize Cedar's collatorization contract for hosting the NFT before completing all the payments</p></div>
+        <div class="flex flex-row gap-3 mb-3"><input type="checkbox" class="text-xs mt-2" id="agree"><label for="agree" class="mt-1 text-xs text-neutral-900 justify-center">I agree to Cedar's <a href="#" class="text-blue-400">Terms of use</a> and I authorize Cedar's collatorization contract for hosting the NFT before completing all the payments</label></div>
 
         <span
             class="flex justify-center w-full  leading-6 border-0 border-gray-100 border-solid box-border"

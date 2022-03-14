@@ -67,6 +67,8 @@ export default {
       this.selected = 'home';
     }
 
+    document.title = 'Cedar';
+
 
   },
   methods:{

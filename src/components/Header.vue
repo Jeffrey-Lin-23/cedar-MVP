@@ -28,23 +28,26 @@
                 placeholder="Search items, collections, and profiles"
             />
           </div>
-          <a
-              href="/"
+          <router-link
+              to="/"
               class="ml-4 font-bold border-0 border-gray-100 border-solid cursor-pointer box-border "
-              :class="[ selected==='home' ? 'text-gray-900': 'text-gray-400' ]"
+              :class="[ select==='home' ? 'text-gray-900': 'text-gray-400' ]"
               aria-current="page"
-          >Buy Now</a
-          ><a
-            href="/pay-later"
+              @click="changeSelect('home')"
+          >Buy Now</router-link
+          ><router-link
+            to="/pay-later"
             class="mx-4 font-bold border-0 border-gray-100 border-solid cursor-pointer box-border"
-            :class="[ selected==='pay-later' ? 'text-gray-900': 'text-gray-400' ]"
-        >Pay later</a
+            :class="[ select==='pay-later' ? 'text-gray-900': 'text-gray-400' ]"
+            @click="changeSelect('pay-later')"
+        >Pay later</router-link
         >
-          <a
-              href="/liquidity-pool"
+          <router-link
+              to="/liquidity-pool"
               class="mx-0 font-bold  border-0 border-gray-100 border-solid cursor-pointer box-border"
-              :class="[ selected==='liquidity-pool' ? 'text-gray-900': 'text-gray-400' ]"
-          >Liquidity Pool</a>
+              :class="[ select==='liquidity-pool' ? 'text-gray-900': 'text-gray-400' ]"
+              @click="changeSelect('liquidity-pool')"
+          >Liquidity Pool</router-link>
         </div>
       </div>
 
@@ -121,11 +124,20 @@ export default {
   data(){
     return{
         user: '',
+        select: this.selected,
     }
   },
   props:['selected'],
   mounted(){
-
+    const url = window.location.href;
+    const location = url.split('/');
+    if(location[3] === 'liquidity-pool'){
+      this.select = 'liquidity-pool';
+    }else if(location[3] === 'pay-later'){
+      this.select = 'pay-later';
+    }else{
+      this.select = 'home';
+    }
     this.user = this.$store.getters.getCurrentUser;
   },
   methods:{
@@ -137,6 +149,9 @@ export default {
     disconnect(){
       this.$store.dispatch("disconnectWallet");
       this.user = '';
+    },changeSelect(name){
+      this.select = name;
+
     }
   }
 }
