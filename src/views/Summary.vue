@@ -70,9 +70,24 @@ export default {
       this.displayFee=false;
     },
     purchase(){
-      this.$swal.fire('Purchase Successful!',
-          'You can check into Pay later',
-          'success');
+      this.$swal.fire({
+        title: 'Purchase Successful',
+        position: 'top',
+        icon:"success",
+        toast: true,
+        timer: 3000,
+        showClass: {
+          popup: `
+      animate__animated
+      animate__fadeInDown
+      animate__faster
+    `
+        },
+
+        grow: 'row',
+        showConfirmButton: false,
+        showCloseButton: false
+      });
       this.$router.push('/pay-later');
     }
   }
