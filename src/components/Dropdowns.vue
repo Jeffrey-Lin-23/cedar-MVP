@@ -25,7 +25,7 @@
                Balance
              </div>
               <div class="flex flex-row font-semibold text-2xl">
-              0.0
+              10.7
                 <svg
                     viewBox="0 0 371 592.8"
                     class="w-4 h-4 text-gray-900 align-middle"

@@ -30,7 +30,7 @@ const routes = [
         component: Summary
     },
     {
-        path: '/Collection',
+        path: '/Collection/:cname',
         name: 'Collection',
         component: Collection
     },
@@ -45,7 +45,7 @@ const routes = [
         component: Listed
     },
     {
-        path: '/Detail',
+        path: '/Detail/:num',
         name: 'Detail',
         component: Detail
     }

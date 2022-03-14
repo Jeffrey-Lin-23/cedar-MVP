@@ -177,7 +177,7 @@
         </svg>
       </div>
     </div>
-    <nft-list></nft-list>
+    <NFTList></NFTList>
 
 
   </div>

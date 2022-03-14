@@ -3,7 +3,7 @@
     <div class="w-full flex flex-col items-start flex-1">
       <!-- First banner area  -->
       <div
-          class="flex sticky flex-col p-4 mb-4 w-full font-sans leading-6 text-center bg-white border-0 border-gray-100 border-solid md:top-20 md:mb-0 md:px-6 box-border text-neutral-900"
+          class="flex  flex-col p-4 mb-4 w-full font-sans leading-6 text-center bg-white border-0 border-gray-100 border-solid md:top-20 md:mb-0 md:px-6 box-border text-neutral-900"
       >
         <div
             class="flex flex-col gap-2 justify-between items-start leading-6 border-0 border-gray-100 border-solid lg:items-center md:flex-row box-border"
@@ -229,68 +229,15 @@ export default {
   },
   data(){
     return{
-      nfts : [
-        {
-          img : "https://storage.opensea.io/files/504355c92577a160ee54131d3f8eb1aa.svg",
-          name : "Roman Ultraviolet Ender",
-          num: "6677",
-          price: "4.22",
-        },
-        {
-          img : "https://storage.opensea.io/files/afc867312addeac2cbe03c054a7cd11d.svg",
-          name : "Matias Drooling",
-          num: "5179",
-          price: "4.25",
-        },
-        {
-          img : "https://storage.opensea.io/files/7d8d48e3c4dee76a35b9d8c546fd76a6.svg",
-          name : "Reginald of Mckee",
-          num: "7852",
-          price: "4.25",
-        },
-        {
-          img : "https://storage.opensea.io/files/0668ebdfd4cd667fc49e8ab90efe771c.svg",
-          name : "Spark",
-          num: "7374",
-          price: "4.27",
-        },
-        {
-          img : "https://storage.opensea.io/files/8c43197b1821b1b0b8d73223f4f9d7ed.svg",
-          name : "Aspect from Tyrrell",
-          num: "7168",
-          price: "4.3",
-        },
-        {
-          img : "https://storage.opensea.io/files/0005bd9ecefe1ac618898fb8a5a1f6f7.svg",
-          name : "Mellow from Sutton",
-          num: "5893",
-          price: "4.39",
-        },
-        {
-          img : "https://storage.opensea.io/files/f747403869d6b97a6a60201b8d969443.svg",
-          name : "Redolent",
-          num: "8469",
-          price: "4.35",
-        },
-        {
-          img : "https://storage.opensea.io/files/d26fefba4368c2562bb75ee43a6d3c30.svg",
-          name : "Kemp of Spokesock",
-          num: "7807",
-          price: "4.4",
-        },{
-          img : "https://storage.opensea.io/files/7ef3f60be6406274ab2e6451912b0596.svg",
-          name : "Victoria Incense Chance",
-          num: "9743",
-          price: "4.4",
-        },
-        {
-          img : "https://storage.opensea.io/files/a8a58ce28090b513c11aca36c73acba3.svg",
-          name : "Band Peppery",
-          num: "6960",
-          price: "4.4",
-        }
-      ]
+      collectionName:'',
+      nfts : ''
     }
+  },
+  mounted(){
+    const url = window.location.href;
+    this.collectionName = url.split('/')[4];
+    this.nfts = this.$store.getters.getNFT[this.collectionName]
+    console.log(this.collectionName);
   }
 }
 </script>
