@@ -1,7 +1,9 @@
 <template>
   <div
       class="flex flex-col items-center w-full rounded-xl relative shadow-lg unselected transition mb-5 overflow-hidden group hover-shadow cursor-pointer ml-4"
-      data-v-60718b2e="">
+      data-v-60718b2e=""
+      @click ="purchase"
+  >
     <div class="relative w-full w-full" data-v-063eca2a="" data-v-60718b2e=""
          style="border-radius: 11px 11px 0px 0px;"><span class="vue-skeletor vue-skeletor--text square"
                                                          data-v-063eca2a="" style="display: none;">&zwnj;</span><img
@@ -43,7 +45,13 @@
 
 <script>
 export default {
-  props:['img','name','num','price']
+  props:['img','name','num','price'],
+  methods:{
+    purchase(){
+      const url = '/Detail/'+this.num;
+      this.$router.push(url);
+    }
+  }
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-1 flex-col items-center mb-6 tracking-wide space-x-0.5">
+  <div class="flex flex-1 flex-col items-center mb-3 tracking-wide space-x-0.5">
     <h1 class="text-center text-4xl mb-4">
       Buy  NFTs  Pay  Later
     </h1>

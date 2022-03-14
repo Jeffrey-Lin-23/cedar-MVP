@@ -1,6 +1,6 @@
 <template>
-  <a
-      href="/collection/cyberbrokers/"
+  <router-link
+      :to="{path:link}"
       class="flex items-center py-4 px-0 h-16 font-sans text-sm font-medium leading-5 text-left border-t-0 border-b border-gray-200 border-solid cursor-pointer lg:px-4 box-border border-x-0 text-zinc-800"
 
   ><div
@@ -49,13 +49,19 @@
         class="hidden w-1/12 text-right border-0 border-gray-100 border-solid lg:inline box-border"
     >
       {{ supply }}
-    </div></a
+    </div></router-link
   >
 </template>
 
 <script>
 export default {
-  props:['img','name','volume','percent','fprice','owners','supply']
+  props:['img','name','volume','percent','fprice','owners','supply'],
+  computed:{
+    link ()
+    {
+      return '/collection/' + this.name
+    }
+  }
 }
 </script>
 
