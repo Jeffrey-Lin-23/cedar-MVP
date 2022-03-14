@@ -26,13 +26,13 @@ import Title from "../components/Title.vue";
         <span
             class="flex justify-center w-full  leading-6 border-0 border-gray-100 border-solid box-border"
             data-v-18c1ff1f=""
-        ><a
+        ><div
             class="flex justify-center items-center py-3 px-6 w-full max-w-sm text-base font-medium text-white bg-violet-600 rounded-xl border-0 border-gray-100 border-solid cursor-pointer md:py-4 box-border"
             data-v-18c1ff1f=""
-            href="/"
+            @click="purchase"
         >
       Confirm
-    </a>
+    </div>
           <!----></span
         >
         <p class="flex mt-1 text-xs text-gray-400 justify-center">
@@ -68,6 +68,12 @@ export default {
     },
     hidefee(){
       this.displayFee=false;
+    },
+    purchase(){
+      this.$swal.fire('Purchase Successful!',
+          'You can check into Pay later',
+          'success');
+      this.$router.push('/pay-later');
     }
   }
 }

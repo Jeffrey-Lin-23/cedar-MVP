@@ -1,5 +1,5 @@
 <template>
-  <div class=" bg-gray-100 px-10 py-5 rounded-lg shadow-lg min-w-[60vw] flex-row flex-1 justify-between gap-4 mb-5">
+  <div class=" bg-white px-10 py-5 rounded-lg shadow-lg min-w-[60vw] flex-row flex-1 justify-between gap-4 mb-5">
 
       <div class="grid grid-cols-5 gap-1 items-center">
         <div class="container justify-start">
@@ -86,8 +86,8 @@
             </p>
           </div>
 
-          <div class="w-full mr-5 bg-green-200  h-3 rounded-lg mt-2 overflow-hidden">
-            <div class="bg-green-400 h-full rounded-lg shadow-md" :style="{width: calculateWidth}"></div>
+          <div class="w-full mr-5 bg-neutral-900  h-2 mt-2 overflow-hidden">
+            <div class=" h-full  shadow-md" style="background-color: #4BDB4B" :style="{width: calculateWidth}"></div>
           </div>
         </div>
         <div class="flex flex-col justify-between ml-5">
