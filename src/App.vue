@@ -6,16 +6,6 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-
-<!--  <header class=" z-30 bg-opacity-90 w-full">-->
-<!--    <Header />-->
-<!--  </header>-->
-<!--  <main class="min-h-[65vh]">-->
-<!--    <router-view></router-view>-->
-<!--  </main>-->
-<!--  <footer>-->
-<!--    <Footer />-->
-<!--  </footer>-->
 <div class="bg-white min-h-screen text-gray-800">
   <!-- Top Nav Bar-->
   <Head :selected="selected"></Head>

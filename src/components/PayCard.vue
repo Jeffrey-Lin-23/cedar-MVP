@@ -3,14 +3,15 @@
 
       <div class="grid grid-cols-5 gap-1 items-center">
         <div class="container justify-start">
-          <img  :src="img" class="h-1/2" width="150" height="150"/>
+          <img  :src="img" width="150" height="150"/>
         </div>
 
         <div class="col-span-3 flex flex-col">
           <p class="text-3xl mb-7 mt-0">{{ name }} <span class="ml-3 text-2xl text-gray-500"> {{ id }}</span></p>
-          <p class="text-sm mb-5">Due Day: {{ due }}</p>
+          <p v-show="!complete" class="text-sm mb-5">Due Day: {{ due }}</p>
+          <p v-show="complete" class="text-sm mb-2">Congrats,</p>
           <div class="flex flex-row justify-between ">
-            <p class="text-sm flex flex-row">Amount: {{ Amount }}
+            <p v-show="!complete" class="text-sm flex flex-row">Amount: {{ Amount }}
               <svg
                   viewBox="0 0 371 592.8"
                   class="w-4 h-4 text-gray-900 align-middle"
@@ -34,6 +35,7 @@
 
                 ></path></svg
               ></p>
+            <p v-show="complete" class="text-sm ">you completed all the payment!</p>
             <p class="text-sm flex flex-row">Remaining: {{ remain }}
               <svg
                   viewBox="0 0 371 592.8"
@@ -123,6 +125,7 @@ export default {
     total : String,
     img: String,
     link: String,
+    complete:Boolean
   },
   data(){
     return{

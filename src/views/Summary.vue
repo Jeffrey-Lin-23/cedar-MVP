@@ -52,12 +52,12 @@ export default {
   },
   data(){
     return{
-      downAmount:'38.54',
-      nextAmount:'51.24',
-      processAmount:'1.28',
+      downAmount:'1.5',
+      nextAmount:'1.5',
+      processAmount:'0.128',
       gasAmount:'0.04',
       payDate:'Sun, 03/13/2022',
-      totalAmount:'89.78',
+      totalAmount:'3',
       displayFee: false,
 
     }

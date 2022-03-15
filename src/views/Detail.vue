@@ -372,6 +372,61 @@ export default {
         att : '14',
         amount: '666',
         percent: '6.67'
+      },{
+        type:'Pants',
+        att : 'Ready for action shorts',
+        amount: '159',
+        percent: '1.59'
+      },{
+        type:'Body',
+        att : '16',
+        amount: '698',
+        percent: '6.99'
+      },{
+        type:'Facial Covering',
+        att : 'band aid',
+        amount: '143',
+        percent: '1.43'
+      },{
+        type:'Hair',
+        att : 'side elegance',
+        amount: '111',
+        percent: '1.11'
+      },{
+        type:'Mind',
+        att : '18',
+        amount: '698',
+        percent: '6.99'
+      },{
+        type:'Underwear',
+        att : 'navy strap',
+        amount: '536',
+        percent: '5.37'
+      },{
+        type:'Talent',
+        att : 'gunter',
+        amount: '376',
+        percent: '3.77'
+      },{
+        type:'Class',
+        att : 'explores',
+        amount: '1943',
+        percent: '19.46'
+      },{
+        type:'Hat',
+        att : 'solver',
+        amount: '228',
+        percent: '2.28'
+      },{
+        type:'Species',
+        att : 'human',
+        amount: '9762',
+        percent: '97.76'
+      },{
+        type:'Top',
+        att : 'olive',
+        amount: '209',
+        percent: '2.09'
       }
       ]
     }
